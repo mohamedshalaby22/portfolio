@@ -53,7 +53,7 @@ export default function Hero() {
             <ScrollReveal delay={0.5}>
               <div className="flex gap-4 mt-8">
                 <a
-                  href="#work"
+                  href="#case-studies"
                   data-cursor
                   className="text-xs font-semibold tracking-[0.15em] uppercase px-6 py-3 bg-black text-white hover:bg-gray-900 transition-all duration-300"
                 >

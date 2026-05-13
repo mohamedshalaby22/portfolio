@@ -71,22 +71,19 @@ export default function Navbar() {
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden flex flex-col gap-1.5 p-2"
+              className="md:hidden flex items-center justify-center w-8 h-8"
               data-cursor
               aria-label="Menu"
             >
-              <motion.span
-                className="block w-5 h-[1.5px] bg-black"
-                animate={menuOpen ? { rotate: 45, y: 4 } : { rotate: 0, y: 0 }}
-              />
-              <motion.span
-                className="block w-5 h-[1.5px] bg-black"
-                animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
-              />
-              <motion.span
-                className="block w-5 h-[1.5px] bg-black"
-                animate={menuOpen ? { rotate: -45, y: -4 } : { rotate: 0, y: 0 }}
-              />
+              {menuOpen ? (
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                  <path d="M4 4l10 10M14 4L4 14" />
+                </svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+                  <path d="M3 4h12M3 9h12M3 14h12" />
+                </svg>
+              )}
             </button>
           </div>
         </div>
