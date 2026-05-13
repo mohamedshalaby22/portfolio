@@ -8,6 +8,10 @@
   --color-line: #e5e5e5;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  * { cursor: none; }
+}
+
 body {
   background-color: #ffffff;
   color: #000000;

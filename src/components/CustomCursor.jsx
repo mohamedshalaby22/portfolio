@@ -2,6 +2,10 @@ import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 export default function CustomCursor() {
+  const [isTouch] = useState(
+    () => typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0)
+  )
+  if (isTouch) return null
   const cursorX = useMotionValue(-100)
   const cursorY = useMotionValue(-100)
   const [hovering, setHovering] = useState(false)
