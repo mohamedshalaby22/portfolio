@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #000000;
+  --color-light: #ffffff;
+  --color-muted: #666666;
+  --color-subtle: #999999;
+  --color-line: #e5e5e5;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.editorial-grid-reverse {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.oversize {
+  font-size: clamp(3rem, 10vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  font-weight: 900;
+}
+
+.oversize-sm {
+  font-size: clamp(2rem, 6vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  font-weight: 900;
+}
+
+.section-number {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: #999999;
+}
+
+.asym-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.glass {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.glass-hover:hover {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
