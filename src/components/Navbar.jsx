@@ -1,6 +1,8 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
+const base = import.meta.env.BASE_URL
+
 const links = [
   { href: '#timeline', label: 'Experience' },
   { href: '#case-studies', label: 'Case Studies' },
@@ -57,7 +59,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="/images/Mohamed%20Shalaby%20CV.pdf"
+                href={`${base}images/Mohamed%20Shalaby%20CV.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor
@@ -111,7 +113,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="/images/Mohamed%20Shalaby%20CV.pdf"
+              href={`${base}images/Mohamed%20Shalaby%20CV.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}

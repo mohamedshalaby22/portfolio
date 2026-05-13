@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import ScrollReveal from './ScrollReveal'
 
+const base = import.meta.env.BASE_URL
+
 export default function Hero() {
   return (
     <section id="hero" className="min-h-screen flex items-center px-8 pt-24 pb-16">
@@ -58,7 +60,7 @@ export default function Hero() {
                   View Projects
                 </a>
                 <a
-                  href="/images/Mohamed%20Shalaby%20CV.pdf"
+                  href={`${base}images/Mohamed%20Shalaby%20CV.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cursor
@@ -74,7 +76,7 @@ export default function Hero() {
             <div className="relative">
               <div className="aspect-[3/4] bg-gray-100 overflow-hidden">
                 <img
-                  src="/images/my-image.jpeg"
+                  src={`${base}images/my-image.jpeg`}
                   alt="Mohamed Shalaby"
                   className="w-full h-full object-cover grayscale"
                 />
